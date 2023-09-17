@@ -6,6 +6,8 @@
 
 }
 
+
+
 /* css for the first section the input section  */
 .container{
     display: flex;
@@ -59,10 +61,7 @@
     border-radius: 3rem;
     z-index: 1;
 }
-.inputTodolistContainer{
-    display: flex;
-    flex-wrap: wrap;
-}
+
 .taskButtons{
     position: absolute;
     right: 20px;
@@ -124,6 +123,7 @@
 
 .span{
     padding: 10px ;
+    max-width: 19rem;
 }
 
 /* using media query to make it more responsive handles 800px   */
@@ -148,14 +148,22 @@
     height: 15px ;
     width: 15px;
 }
+.span{
+    padding: 10px ;
+    max-width: 10rem;
+}
 }
 
 /* handles screen with mid size 600px  */
 @media only screen and (max-width: 600px) {
+    
     body{
         background-color: lightblue;
     }
-
+    .span{
+        padding: 10px ;
+        max-width: 8rem;
+    }
     .input{
     display: flex;
     margin: 16px;
@@ -184,7 +192,7 @@
      
      .taskButtons{
         position: absolute;
-        right: 20px;
+        right: 41px;
         background-color: rgb(85, 163, 138);
         color: white;
         height: fit-content;
@@ -192,6 +200,7 @@
         text-decoration: none;
         font-size: small;
     }
+   
     .checkbox{
         position: absolute;
         left : 1px ; 
@@ -201,6 +210,7 @@
         border-radius: 50%; 
         margin-left: 10px ;
     }
+    
 }
 
 /* the css handle smaller screen sizes less then 300px  */
@@ -216,4 +226,22 @@
     .list{
         padding : 5px 
     }
+}
+
+@media only screen and  (min-height : 950px ) , (max-height : 2500) {
+    .container{
+        height: 30vh;
+    }
+}
+
+.editButtons{
+    position: absolute;
+    right: 100px;
+    background-color: rgb(85, 163, 138);
+    color: white;
+    height: fit-content;
+    padding: 10px;
+    border: 1px solid rgb(154, 195, 212);
+    border-radius: 10rem;
+    margin-left: 10px;
 }
